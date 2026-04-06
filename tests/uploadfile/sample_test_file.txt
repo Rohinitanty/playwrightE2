@@ -1,0 +1,14 @@
+Sample Test File
+
+Name: Rohini
+Role: QA Automation Engineer
+Tool: Playwright
+Language: JavaScript / TypeScript
+
+Test Data:
+Username: test_user_01
+Password: Pass@123
+
+Notes:
+- This is a dummy file for testing purposes.
+- You can use this file for upload, read, or parsing tests.
