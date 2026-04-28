@@ -44,5 +44,7 @@ test("Orange demo" , async ({page})=>{
     await page.getByLabel('Confirm Password').fill('test@123');
 
     await page.getByRole("button" , {name: " Save "}).click();
+
+    await page.context().storageState({path: 'auth.json'});
     
 })

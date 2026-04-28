@@ -1,0 +1,46 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ProjectMyntra.spec.js >> end to end test on Myntra
+- Location: tests\ProjectMyntra.spec.js:3:5
+
+# Error details
+
+```
+Error: page.goto: SSL peer certificate or SSH remote key was not OK
+Call log:
+  - navigating to "https://www.myntra.com/", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1  | import {test,expect, chromium} from '@playwright/test';
+  2  | 
+  3  | test("end to end test on Myntra" , async({browser})=>{
+  4  | 
+  5  |     const context = await browser.newContext();
+  6  |     const page = await context.newPage();
+  7  | 
+> 8  |     await page.goto("https://www.myntra.com/");
+     |                ^ Error: page.goto: SSL peer certificate or SSH remote key was not OK
+  9  |     await expect(page).toHaveTitle("Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra");
+  10 | 
+  11 |     await page.getByText("Profile").click();
+  12 |     await page.getByRole('link', { name: 'login / Signup' }).click();
+  13 |     await page.locator("//input[@type='tel']").fill('8249465235');
+  14 |     await page.locator("input[type='checkbox']").click();
+  15 |     await page.getByText("CONTINUE").click();
+  16 |     await page.waitForTimeout(5000);
+  17 |     await expect(page.locator('h3')).toContainText('Verify with OTP');
+  18 |     await page.waitForTimeout(5000);
+  19 | 
+  20 | 
+  21 | });
+```

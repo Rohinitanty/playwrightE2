@@ -10,5 +10,6 @@ test("Input Box" , async({page})=>{
     await expect(await page.locator("//input[@id='name']")).toBeEnabled();
     await page.fill("//input[@id='name']" , "John");
     await page.waitForTimeout(5000);
+    await page.context().storageState({path:'auth.json'})
 
 })

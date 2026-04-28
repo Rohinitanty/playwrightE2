@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","16470","files uploading","chromium","2026-04-09","passed","2026-04-09","","filesUpload.spec.js","",""
+"","9057","files uploading","firefox","2026-04-09","passed","2026-04-09","","filesUpload.spec.js","",""
+"","8100","files uploading","webkit","2026-04-09","passed","2026-04-09","","filesUpload.spec.js","",""
